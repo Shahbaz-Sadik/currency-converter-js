@@ -2,7 +2,7 @@
 
 //select dom element
 const currencyOne = document.getElementById('select-currency-one');
-const inputOne= document.getElementById('input-one');
+const inputOne = document.getElementById('input-one');
 const currencyTwo = document.getElementById('select-currency-two');
 const inputTwo = document.getElementById('input-2');
 const rateValue = document.getElementById('rate-value');
@@ -26,11 +26,11 @@ swapButton.addEventListener('click', () => {
 });
 
 //call api and calculate functionn
-async function convator(){
+async function convator() {
     const currencyValueOne = currencyOne.value;
     const currencyValueTwo = currencyTwo.value;
     //console.log(currencyValueTwo);
-
+    try {
         const result = await fetch(`https://api.exchangerate-api.com/v4/latest/${currencyValueOne}`);
         const data = await result.json();
         //console.log(data);
@@ -40,6 +40,9 @@ async function convator(){
         rateValue.innerText = (`1 ${currencyValueOne} = ${rates} ${currencyValueTwo}`);
 
         inputTwo.value = (rates * inputOne.value).toFixed(2);
+    } catch (error) {
+        alert(error);
+    }
 
 }
 
