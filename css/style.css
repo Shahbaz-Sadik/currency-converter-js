@@ -1,0 +1,55 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: aliceblue;
+  max-width: 1440px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding:3%;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+h1, p{
+    color: rgba(247, 148, 36);
+    padding: 1%;
+}
+
+.currency-one,
+.currency-two{
+    padding: 2% 0;
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+}
+select{
+    font-size: 16px;
+    color: rgba(247, 148, 36);
+    border: 1px solid rgba(247, 148, 36);;
+}
+
+.currency-rate{
+    padding: 2% 0;
+    text-align: center;
+    color: rgba(247, 148, 36);
+    font-size: 16px;
+
+}
+input{
+    border: 0;
+    text-align: right;
+    font-size: 32px;
+    color: rgba(247, 148, 36);
+    
+}
+
+
+
+
+
