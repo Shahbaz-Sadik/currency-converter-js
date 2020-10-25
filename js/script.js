@@ -6,12 +6,24 @@ const inputOne= document.getElementById('input-one');
 const currencyTwo = document.getElementById('select-currency-two');
 const inputTwo = document.getElementById('input-2');
 const rateValue = document.getElementById('rate-value');
+const swapButton = document.getElementById('swap-btn');
 
 //add eventlistener to selected dom element
 currencyOne.addEventListener('change', convator);
 currencyTwo.addEventListener('change', convator);
 inputOne.addEventListener('input', convator);
 inputTwo.addEventListener('input', convator);
+
+
+//swap button for the select value
+swapButton.addEventListener('click', () => {
+    const temp = currencyOne.value;
+    currencyOne.value = currencyTwo.value;
+    currencyTwo.value = temp;
+
+    convator();
+
+});
 
 //call api and calculate functionn
 async function convator(){
