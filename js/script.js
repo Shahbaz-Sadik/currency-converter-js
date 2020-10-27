@@ -46,15 +46,15 @@ async function fetchCurrencyRate() {
   }
 }
 
-async function displayRate() {
-  const rates = await fetchCurrencyRate();
+async function displayRate(rat) {
+  const rates = rat;
   rateValue.innerText = `1 ${currencyValueOne} = ${rates} ${currencyValueTwo}`;
 }
 
 async function calculateCurrency() {
   const getRates = await fetchCurrencyRate();
 
-  displayRate();
+  displayRate(getRates);
   resultShow.innerText = (getRates * inputOne.value).toFixed(2);
   //console.log(getRates);
 }
