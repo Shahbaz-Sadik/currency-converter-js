@@ -34,7 +34,6 @@ p {
 .currency-one,
 .currency-two {
   padding: 2% 0;
-
   text-align: center;
   width: 100%;
 }
@@ -42,6 +41,11 @@ select {
   font-size: 16px;
   color: rgba(247, 148, 36);
   border: 0;
+}
+
+.currency-two{
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .currency-rate {
@@ -55,7 +59,17 @@ input {
   text-align: right;
   font-size: 32px;
   color: rgba(247, 148, 36);
+  background-color: aliceblue;
 }
+#result{
+  text-align: right;
+  font-size: 32px;
+  color: rgba(247, 148, 36);
+  flex: 80%;
+  background-color: aliceblue;
+}
+
+
 input:focus,
 select:focus,
 #swap-btn:focus {
@@ -73,16 +87,13 @@ select:focus,
     cursor: pointer;
 }
 #swap-btn:hover {
-    -webkit-transform: translateY(-4px) translateX(-4px);
     transform: translateY(-4px) translateX(-4px);
-    -webkit-transition: all .5s;
     transition: all .5s;
-    -webkit-box-shadow: 2px 2px rgba(124, 123, 123, 0.89);
     box-shadow: 2px 2px rgba(124, 123, 123, 0.89);
 }
 
 .convator{
-    padding: 4%;
+  padding: 4%;
 }
 
 @media (max-width: 560px) {
